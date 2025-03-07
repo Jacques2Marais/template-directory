@@ -4,7 +4,7 @@
     background-color: var(--background-secondary);
     background-position: 100%;
     border-radius: var(--spacing-03);
-    height: 8.5rem;
+    height: 8rem;
     position: relative;
     --shadow-color: rgb(0 0 0 / 0.04);
     box-shadow:
@@ -18,15 +18,30 @@
 }
 
 .link-card > a {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
     color: var(--accent);
-    justify-content: space-between;
+    gap: 14px;
+}
+
+.link-card > a > strong {
+    font-size: 14px;
 }
 
 p {
     color: var(--text-secondary);
+}
+
+.card-body {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3; 
+
+    -webkit-box-orient: vertical;
 }
 
 .link-card:is(:hover, :focus-within) {
